@@ -12,6 +12,7 @@
     <meta property="og:image" content="https://raw.githubusercontent.com/lupeydev/webreq/main/triocat.jpg">
 
     <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
     <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/lupeydev/webreq/main/triocat.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
 </head>
@@ -37,10 +38,7 @@
     <div class="center">
         <div class="below-center">
             <button id="muteButton"><img src="assets/icons/mute.png" class="muteButton"></button>
-                <script>muteButton.addEventListener("click", () => {audio.muted = !audio.muted});</script>
-
             <button id="playNext"><img src="assets/icons/playnext.svg"></button>
-                <script>playNext.addEventListener("click", () => {playRandom();});</script>
 
             <img src="https://raw.githubusercontent.com/lupeydev/webreq/main/triocat.jpg" class="logo" />
 
@@ -64,56 +62,7 @@
     </div>
 
 <script>
-const sounds = [
-    "assets/videos/jungle.mp4",
-    "assets/videos/myshit.mp4",
-    "assets/videos/stillthinkaboutyou.mp4"
-];
 
-let currentIndex = -1;
-
-const video = document.getElementById("video");
-const audio = document.getElementById("audio");
-
-function getRandomIndex() {
-    let newIndex;
-    do {
-        newIndex = Math.floor(Math.random() * sounds.length);
-    } while (newIndex === currentIndex);
-    return newIndex;
-}
-
-function playRandom() {
-    currentIndex = getRandomIndex();
-    const file = sounds[currentIndex];
-
-    video.src = file;
-    audio.src = file;
-
-    video.play();
-    audio.play();
-}
-
-video.addEventListener("ended", playRandom);
-
-window.onclick = function () {
-    playRandom();
-
-    video.volume = 0;
-    audio.volume = 1;
-
-    const click = document.getElementById("click");
-    if (click) click.remove();
-
-    window.onclick = null;
-};
-
-document.addEventListener("keydown", (event) => {
-    if (event.key === "F12" || (event.ctrlKey && event.shiftKey && event.key === "I")) {
-        event.preventDefault();
-        window.open("https://lupeydev.github.io/Info/", "_blank");
-    }
-});
 </script>
 
 </body>
