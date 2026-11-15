@@ -1,5 +1,5 @@
 const sounds = [
-    "assets/videos/Yeat-ONNOTHING.webm"
+    "https://raw.githubusercontent.com/lupeydev/Info/main/assets/videos/Yeat-ONNOTHING.webm"
 ];
 
 let currentIndex = -1;
