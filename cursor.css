@@ -1,0 +1,11 @@
+.trail-dot {
+  position: fixed;
+  width: 12px;
+  height: 12px;
+  background: #4028db;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 8px rgba(255, 77, 85, 0.6);
+  z-index: 99999;
+}

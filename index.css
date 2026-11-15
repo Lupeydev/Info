@@ -55,11 +55,6 @@ filter: drop-shadow(0 0 18px rgba(255, 255, 255, 0.9));
     align-content:center;
     vertical-align: middle;
 }
-h2{
-    color:white;
-    font-family: "Poetsen One";
-    align-self: center;
-}
 .video{
     display:none;
 }
@@ -124,6 +119,7 @@ p{
   text-align: center;      
   margin-top: 20px;
 }
+
 #muteButton {
     position: absolute;
     top: 10px;

@@ -1,7 +1,5 @@
 const sounds = [
-    "assets/videos/jungle.mp4",
-    "assets/videos/myshit.mp4",
-    "assets/videos/stillthinkaboutyou.mp4"
+    "assets/videos/Yeat-ONNOTHING.webm",
 ];
 
 let currentIndex = -1;
